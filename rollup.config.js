@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { paramCase, pascalCase } from 'change-case';
 import { readFileSync, appendFileSync } from 'fs';
 import sourcemaps from 'rollup-plugin-sourcemaps';
@@ -19,17 +20,17 @@ export default {
   plugins: [
     nodeResolve({
       main: true,
-      jsnext: true
+      jsnext: true,
     }),
     commonjs({
-      include: 'node_modules/**'
+      include: 'node_modules/**',
     }),
     sourcemaps({
-      exclude: 'src/**'
+      exclude: 'src/**',
     }),
     babel({
-      exclude: 'node_modules/**'
-    })
+      exclude: 'node_modules/**',
+    }),
   ],
   targets: [
     { dest: `dist/${moduleId}.js`, format: 'umd' },

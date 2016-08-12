@@ -1,0 +1,8 @@
+{
+  "root": true,
+  "extends": "airbnb-base",
+  "parser": "typescript-eslint-parser",
+  "rules": {
+    "no-underscore-dangle": 0
+  }
+}
